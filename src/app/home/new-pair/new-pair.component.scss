@@ -1,0 +1,41 @@
+
+#add-pair-container {
+    padding: 20px;
+}
+#title {
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: capitalize;
+    margin-bottom: 4%;
+}
+ion-button{
+    display: block;
+    margin: 0 auto;
+}
+ion-input{
+    background: #42d77d2b;
+    margin: 1% 0;
+}
+ion-input {
+    background: #42d77d2b;
+    margin: 1% 0;
+    &.has-focus {
+      border: solid 2px var(--ion-color-primary);
+    }
+    &.input-error{
+      border: solid 2px var(--ion-color-danger);
+    }
+  }
+form{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    .form-group {
+        margin-bottom: 2%;
+        width: 49%;
+    }
+    .msg{
+        color:var(--ion-color-danger);
+    }
+}

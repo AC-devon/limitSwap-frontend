@@ -24,3 +24,24 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+
+@font-face {
+    font-family: "Arimo";
+    src: url("./assets/fonts/Arimo-Regular.ttf");
+  }
+body{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: Arimo;
+}
+
+// popover style
+ion-popover.custom-popover {
+    .popover-content {
+        top: 5% !important;
+      }
+    --width: 600px;
+    --max-width: 90%;
+  }

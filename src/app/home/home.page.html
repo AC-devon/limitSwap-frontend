@@ -1,20 +1,25 @@
-<ion-header [translucent]="true">
+
+
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <div id="head">
+      <ion-title>
+        <span style="color:#ff8bf4">Limit</span><span style="color:#8dc647">Swap</span>
+      </ion-title>
+      <ion-button>connect wallet</ion-button>
+    </div>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeLg="4" size="12"><app-pair-list (onSelectSymbol)="iframeTicker($event)" ></app-pair-list></ion-col>
+      <ion-col sizeLg="8" size="12">
+        <iframe [src]="url" style="border: none;"></iframe>
+      </ion-col>
+      <!-- <ion-col sizeLg="4" size="12"></ion-col> -->
+    </ion-row>
+  </ion-grid>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
 </ion-content>

@@ -1,0 +1,76 @@
+<div id="add-pair-container">
+  <div id="title">add new limitSwap</div>
+  <form [formGroup]="newPairForm" autocomplete="off" (ngSubmit)="submitForm()">
+    <div class="form-group">
+      <ion-label for="symbol">
+        symbol
+      </ion-label>
+      <ion-input name="symbol" appInputTrim formControlName="symbol" class="form-control app-input" type="text"
+        [ngClass]="{
+        'input-error':
+          !newPairForm.controls['symbol'].valid &&
+          newPairForm.controls['symbol']?.touched
+      }"></ion-input>
+      <div class="msg" *ngIf="
+        !newPairForm.controls['symbol'].valid && newPairForm.controls['symbol']?.touched
+      ">
+        invalid symbol
+      </div>
+    </div>
+    <div class="form-group">
+      <ion-label for="buyPrice">
+        buy price
+      </ion-label>
+      <ion-input name="buyPrice" formControlName="buyPrice" #pw class="form-control app-input" type="number" [ngClass]="{
+        'input-error':
+          !newPairForm.controls['buyPrice'].valid &&
+          newPairForm.controls['buyPrice']?.touched
+      }"></ion-input>
+      <div class="msg" *ngIf="
+        !newPairForm.controls['buyPrice'].valid &&
+        newPairForm.controls['buyPrice']?.touched
+      ">
+        invalid buy price
+      </div>
+    </div>
+    <div class="form-group">
+      <ion-label for="buyPrice">
+        sell price
+      </ion-label>
+      <ion-input name="sellPrice" formControlName="sellPrice" #pw class="form-control app-input" type="number"
+        [ngClass]="{
+        'input-error':
+          !newPairForm.controls['sellPrice'].valid &&
+          newPairForm.controls['sellPrice']?.touched
+      }"></ion-input>
+      <div class="msg" *ngIf="
+        !newPairForm.controls['sellPrice'].valid &&
+        newPairForm.controls['sellPrice']?.touched
+      ">
+        invalid sell price
+      </div>
+    </div>
+    <div class="form-group">
+      <ion-label for="buyPrice">
+        id
+      </ion-label>
+      <ion-input name="id" formControlName="id" #pw class="form-control app-input" type="text" [ngClass]="{
+        'input-error':
+          !newPairForm.controls['id'].valid &&
+          newPairForm.controls['id']?.touched
+      }"></ion-input>
+      <div class="msg" *ngIf="
+        !newPairForm.controls['id'].valid &&
+        newPairForm.controls['id']?.touched
+      ">
+        invalid id
+      </div>
+    </div>
+   
+      <ion-button  type="submit" [disabled]="!newPairForm.valid">
+        add pair
+      </ion-button>
+    
+
+  </form>
+</div>

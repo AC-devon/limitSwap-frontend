@@ -1,0 +1,35 @@
+#header{
+    // border-bottom:1px solid #8dc647;
+    ion-item{
+        --border-color:#8dc647;
+        text-transform: capitalize;
+    }
+}
+ion-label{
+    text-align: center;
+}
+#container-pairs {
+    min-height: 300px;
+    max-height: 500px;
+    max-width: 600px;
+    overflow-y: scroll;
+}
+#pairs{
+    ion-item{
+    font-size: 14px;
+    --transition: 0.3s ease;
+        &:hover{
+            --background-hover: #d476d170;
+            --background-hover-opacity: #d476d17a;
+            cursor: pointer;
+        }
+    }
+    ion-icon {
+        position: absolute;
+        right: 3%;
+    }
+} 
+
+ion-button{
+    display: block;
+}

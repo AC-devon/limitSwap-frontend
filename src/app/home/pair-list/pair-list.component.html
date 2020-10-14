@@ -1,0 +1,24 @@
+
+<div id="container-pairs">
+  <div id="header">
+    <ion-item>
+      <ion-label>symbol</ion-label>
+      <ion-label>buy price</ion-label>
+      <ion-label>sell price</ion-label>
+      <ion-label>id</ion-label>
+    </ion-item>
+  </div>
+  <div id="pairs">
+
+    <ion-list *ngFor="let pair of pairsService.pairs$ | async; let i = index;">
+      <ion-item (click)="viewTrade(pair.symbol)" (mouseenter) ="selected = i"  (mouseleave) ="selected = null" button="true">
+        <ion-label>{{pair.symbol}}</ion-label>
+        <ion-label>{{pair.buyPrice}}</ion-label>
+        <ion-label>{{pair.sellPrice}}</ion-label>
+        <ion-label>{{pair.id}}</ion-label>
+        <ion-icon (click)="deletePair(i)" [hidden]="selected != i" name="trash-outline"></ion-icon>
+      </ion-item>
+    </ion-list>
+  </div>
+</div>
+<ion-button (click)="addPair()">add new pair</ion-button>
